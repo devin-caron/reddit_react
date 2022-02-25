@@ -6,7 +6,7 @@ function App() {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    if (localStorage.getItem('favPosts') !== null) {
+    if (localStorage.getItem('favPosts') !== null && localStorage.getItem('favPosts') !== "") {
 
       let favID = localStorage.getItem('favPosts').split(',');
 
