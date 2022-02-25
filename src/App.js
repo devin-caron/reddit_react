@@ -1,11 +1,8 @@
 import './App.css';
 import { BrowserRouter as Router, Route , Routes, Link} from "react-router-dom";
 
-
 import Home from "./components/MainPage"
 import Favourites from "./components/Favourites"
-
-
 
 function App() {
   return (

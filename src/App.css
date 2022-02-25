@@ -6,7 +6,7 @@
 }
 
 nav {
-  background-image: linear-gradient(to right, blue, lightblue);
+  background: blue;
   color: white;
   display: flex;
   justify-content: space-around;
@@ -38,7 +38,7 @@ nav {
 }
 
 header {
-  background-image: linear-gradient(to right, blue, lightblue);
+  background: blue;
   padding: 10px;
   padding-left: 5%;
 }
@@ -125,6 +125,7 @@ h3 {
 }
 
 .removeBtn {
+  cursor: pointer;
   background-color: #0909FF;
   border: none;
   color: white;
