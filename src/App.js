@@ -14,17 +14,17 @@ function App() {
       <nav>
             <h3 className='logo'>React Reddit</h3>
             <ul className="nav-links">
-                <Link to="/">
+                <Link to="/reddit_react/">
                     <li>Search</li>
                 </Link>
-                <Link to="/favourites">
+                <Link to="/reddit_react/favourites">
                     <li>Favourites</li>
                 </Link>
             </ul>
         </nav>
         <Routes>
-          <Route exact path="/" element={<Home/>} />
-          <Route exact path="favourites" element={<Favourites />} />
+          <Route exact path="/reddit_react/" element={<Home/>} />
+          <Route exact path="/reddit_react/favourites" element={<Favourites />} />
         </Routes>
       </Router>
     </div>
