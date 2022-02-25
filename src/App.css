@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: montserrat, sans-serif;
+}
+
+nav {
+  background-image: linear-gradient(to right, blue, lightblue);
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+}
+
+.nav-links {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  font-size: 32px;
+  font-weight: 600;
+  font-style: italic;
+  text-transform: lowercase;
+  background: none;
+  border: none;
+  appearance: none;
+}
+
+.nav-links a{
+  color: white;
+}
+
+.nav-links a:hover{
+  color: lightblue;
+}
+
+header {
+  background-image: linear-gradient(to right, blue, lightblue);
+  padding: 10px;
+  padding-left: 5%;
+}
+
+header input {
+  display: inline-block;
+  color: white;
+  font-size: 32px;
+  font-weight: 600;
+  font-style: italic;
+  text-transform: lowercase;
+  background: none;
+  appearance: none;
+  border-color: white;
+  border-style: solid;
+}
+
+header:before{
+  display: inline-block;
+  color: white;
+  font-size: 32px;
+  font-weight: 600;
+  font-style: italic;
+  text-transform: lowercase;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 600;
+  font-style: italic;
+  color: white;
+  text-transform: lowercase;
+}
+
+.articles article {
+  padding: 30px 12px;
+  background-color: white;
+}
+
+.articles article a {
+  text-decoration: none;
+}
+
+.articles article h3 {
+  color: darkslategray;
+  padding-left: 50px;
+}
+
+.articles article p {
+  color: darkslategray;
+  padding-top: 10px;
+  padding-left: 50px;
+  font-weight: bold;
+}
+
+.articles article:nth-child(2n)
+{
+  background-color: aliceblue;
+}
+
+.articles article:hover {
+  background-image: linear-gradient(to right, lightblue, white);
+}
+
+.star {
+  visibility:hidden;
+  font-size:30px;
+  cursor:pointer;
+}
+.star:before {
+ content: "\2606";
+ position: absolute;
+ visibility:visible;
+ font-size: 40px;
+
+}
+.star:checked:before {
+ content: "\2605";
+ position: absolute;
+}
+
+.logo {
+  font-size: 46px;
+}
+
+.removeBtn {
+  background-color: #0909FF;
+  border: none;
+  color: white;
+  padding: 8px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 15px;
+  margin-left: 50px;
+}
+
+.removeBtn:hover {
+  color: lightblue;
+}
