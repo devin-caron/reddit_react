@@ -4,30 +4,26 @@ import Article from './ArticleFav';
 
 function App() {
   const [articles, setArticles] = useState([]);
-  let favData;
-  // show favourites
-  // console.log(favID[0]);
-  // console.log(favReddit[0]);
 
   useEffect(() => {
     setArticles();
-    if (localStorage.getItem('favPosts') !== null) {
-      let favID = localStorage.getItem('favPosts').split(',');
-      for (var i = 0; i < favID.length; i++) {
-        fetch("https://www.reddit.com/" + favID[i] + ".json").then(res => {
-          if (res.status !== 200) {
-            console.log("ERROR");
-            return;
-          }
+    let favData;
 
-          res.json().then(data => {
-            if (data !== null) {
-              setArticles(data[0].data.children);
-              // console.log(data[0].data.children[0].data.subreddit);
-            }
-          });
-        })
-      }
+    if (localStorage.getItem('favPosts') !== null) {
+
+      let favID = localStorage.getItem('favPosts').split(',');
+
+      const promises = favID.map(f => {
+        return fetch('https://www.reddit.com/' + f + '.json');
+      });
+
+      Promise.all(promises).then(values => {
+        const promisesValues = values.map(v => v.json());
+        Promise.all(promisesValues).then(items => {
+          const mapped = items.map(item => item[0]?.data?.children[0]);
+          setArticles(mapped);
+        });
+      });
     }
   }, []);
 
